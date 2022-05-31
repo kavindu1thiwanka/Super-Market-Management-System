@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="763.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerFormController">
+   <children>
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="27.0" layoutY="155.0" prefHeight="29.0" prefWidth="707.0" promptText="Customer ID :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerTitle" labelFloat="true" layoutX="27.0" layoutY="207.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Customer Title :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="397.0" layoutY="207.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Customer Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="27.0" layoutY="260.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="337.0" promptText="Customer Address :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerProvince" labelFloat="true" layoutX="397.0" layoutY="260.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Province :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerCity" labelFloat="true" layoutX="27.0" layoutY="313.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="City :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerPostalCode" labelFloat="true" layoutX="397.0" layoutY="313.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="337.0" promptText="Postal Code :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="217.0" layoutY="362.0" onAction="#btnSave_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand; -fx-background-radius: 360;" stylesheets="@../styles/manage_customer.css" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnUpdate" fx:id="btnUpdate" layoutX="344.0" layoutY="362.0" onAction="#btnUpdate_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand; -fx-background-radius: 360;" stylesheets="@../styles/manage_customer.css" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomers" layoutX="12.0" layoutY="414.0" prefHeight="307.0" prefWidth="794.0" stylesheets="@../styles/manage_customer.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="97.0" text="Customer ID" />
+            <TableColumn fx:id="colTitle" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="144.0" text="Customer Name" />
+            <TableColumn fx:id="colAddress" prefWidth="130.0" text="Customer Address" />
+            <TableColumn fx:id="colProvince" prefWidth="123.0" text="Province" />
+            <TableColumn fx:id="colCity" prefWidth="108.0" text="City" />
+            <TableColumn fx:id="colPCode" prefWidth="106.0" text="Postal Code" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="472.0" layoutY="362.0" onAction="#btnDelete_OnAction" prefHeight="39.0" prefWidth="105.0" style="-fx-cursor: hand; -fx-background-radius: 360;" stylesheets="@../styles/manage_customer.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="727.0" prefHeight="17.0" prefWidth="827.0" text="Copyright ©️ 2022 Supermarcket. All Right Reserved Design By Kavindu Thiwanka" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="50.0" prefHeight="52.0" prefWidth="827.0" text="Manage Customer" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-1.0" contrast="-1.0" />
+         </effect>
+      </Label>
+      <Separator layoutX="66.0" layoutY="132.0" prefHeight="0.0" prefWidth="684.0" />
+      <Circle fill="RED" layoutX="799.0" layoutY="28.0" opacity="0.56" radius="12.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <FontAwesomeIconView fill="#000000c3" fontSmoothingType="LCD" glyphName="CLOSE" layoutX="793.0" layoutY="33.0" size="15" />
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="786.0" layoutY="15.0" onAction="#closeWindowOnAction" prefHeight="27.0" prefWidth="27.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+      <Pane layoutX="734.0" layoutY="15.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="24.0" prefWidth="49.0" style="-fx-background-radius: 360; -fx-background-color: #87ff83;">
+         <children>
+            <FontAwesomeIconView fill="#000000c2" glyphName="SIGN_OUT" layoutX="13.0" layoutY="18.0" size="20" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="734.0" layoutY="14.0" onMouseClicked="#navigateToLoging" prefHeight="24.0" prefWidth="49.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+      <Pane layoutX="17.0" layoutY="15.0" prefHeight="24.0" prefWidth="49.0" style="-fx-background-radius: 360; -fx-background-color: #f6ff13;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <MaterialDesignIconView glyphName="KEYBOARD_BACKSPACE" layoutX="12.0" layoutY="21.0" size="25" />
+         </children>
+      </Pane>
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="17.0" layoutY="15.0" onMouseClicked="#navigateToHome" prefHeight="24.0" prefWidth="49.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="593.0" prefWidth="1012.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="793.0" fitWidth="889.0" layoutX="-135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ast/close-up-view-shopping-cart-overloaded-with-food-while-background-female-person-choosing-products.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="540.0" layoutY="-1.0" prefHeight="593.0" prefWidth="472.0" style="-fx-background-color: white;">
+         <children>
+            <Text fill="#a8a8a8" layoutX="196.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtUserName" layoutX="142.0" layoutY="207.0" onAction="#goToPassword" prefHeight="36.0" prefWidth="226.0" promptText="Username" />
+            <JFXPasswordField fx:id="txtPassword" layoutX="142.0" layoutY="277.0" prefHeight="36.0" prefWidth="226.0" promptText="Password" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="104.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/ast/User_Icon.png" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="-1.0" hue="1.0" saturation="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="104.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/ast/Password_Icon.png" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="-1.0" hue="1.0" saturation="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="26.0" prefWidth="472.0" style="-fx-background-color: white;" text="Copyright 2022 Supermarket" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="563.0" prefHeight="26.0" prefWidth="472.0" style="-fx-background-color: white;" text="All Right Reserved Design By Kavindu Thiwanka" textAlignment="CENTER" />
+            <Label fx:id="lblError" layoutX="87.0" layoutY="462.0" prefHeight="25.0" prefWidth="321.0" textFill="#f82121">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="247.0" layoutY="380.0" onAction="#goToLoginPage" prefHeight="36.0" prefWidth="165.0" style="-fx-background-color: #30cf98; -fx-background-radius: 360;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="60.0" layoutY="380.0" onAction="#goToCanclePage" prefHeight="36.0" prefWidth="165.0" style="-fx-background-color: #30cf98; -fx-background-radius: 360;" text="CANCEL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Text fontSmoothingType="LCD" layoutX="72.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super Market">
+               <font>
+                  <Font name="System Bold" size="52.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="4.75" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

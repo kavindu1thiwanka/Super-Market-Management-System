@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="763.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakePaymentFormController">
+   <children>
+      <TableView fx:id="tblPayment" layoutX="18.0" layoutY="203.0" prefHeight="514.0" prefWidth="789.0" stylesheets="@../styles/manage_item.css">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="229.0" text="Oder ID" />
+            <TableColumn fx:id="colCustomerId" prefWidth="308.0" text="Customer ID" />
+            <TableColumn fx:id="colCost" prefWidth="246.0" text="Cost(Rs)" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="727.0" prefHeight="17.0" prefWidth="827.0" text="Copyright ©️ 2022 Supermarcket. All Right Reserved Design By Kavindu Thiwanka" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="50.0" prefHeight="52.0" prefWidth="827.0" text="Payment Regarding to Orders" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-1.0" contrast="-1.0" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="116.0" prefHeight="30.0" prefWidth="827.0" text=" Point Of Sale System" textFill="#000000b4">
+         <font>
+            <Font name="Bodoni MT Black" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="66.0" layoutY="180.0" prefHeight="0.0" prefWidth="684.0" />
+      <Circle fill="RED" layoutX="799.0" layoutY="28.0" opacity="0.56" radius="12.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <FontAwesomeIconView fill="#000000c3" fontSmoothingType="LCD" glyphName="CLOSE" layoutX="793.0" layoutY="33.0" size="15" />
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="786.0" layoutY="15.0" onAction="#closeWindowOnAction" prefHeight="27.0" prefWidth="27.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+      <Pane layoutX="734.0" layoutY="15.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="24.0" prefWidth="49.0" style="-fx-background-radius: 360; -fx-background-color: #87ff83;">
+         <children>
+            <FontAwesomeIconView fill="#000000c2" glyphName="SIGN_OUT" layoutX="13.0" layoutY="18.0" size="20" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="734.0" layoutY="14.0" onMouseClicked="#navigateToLoging" prefHeight="24.0" prefWidth="49.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+      <Pane layoutX="17.0" layoutY="15.0" prefHeight="24.0" prefWidth="49.0" style="-fx-background-radius: 360; -fx-background-color: #f6ff13;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <MaterialDesignIconView glyphName="KEYBOARD_BACKSPACE" layoutX="12.0" layoutY="21.0" size="25" />
+         </children>
+      </Pane>
+      <JFXButton contentDisplay="CENTER" ellipsisString="" layoutX="17.0" layoutY="15.0" onMouseClicked="#navigateToHome" prefHeight="24.0" prefWidth="49.0" ripplerFill="WHITE" style="-fx-background-radius: 360;" textFill="TRANSPARENT" textOverrun="CLIP" />
+   </children>
+</AnchorPane>

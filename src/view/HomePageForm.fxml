@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="593.0" prefWidth="1012.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageFormController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="110.0" fitWidth="122.0" layoutX="451.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ast/icons8-shopping-cart.gif" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.35" contrast="0.46" />
+         </effect>
+      </ImageView>
+      <Label layoutX="913.0" layoutY="574.0" text="Version 2022.0.0.1" textFill="#00000070">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Label>
+      <JFXProgressBar layoutX="407.0" layoutY="360.0" />
+   </children>
+</AnchorPane>
